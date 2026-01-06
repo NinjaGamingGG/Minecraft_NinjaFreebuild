@@ -5,10 +5,7 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 class HomeCommand: CommandExecutor {
-    override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
-        if (args == null)  {
-            return false
-        }
+    override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
 
         if (args.isEmpty()) {
             return HomeManager.teleportHome(sender, "default")

@@ -8,9 +8,9 @@ import org.bukkit.command.CommandSender
 
 class TeleportHomeCommand: CommandExecutor {
 
-    override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
+    override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
 
-        if(args == null || args.isEmpty()) {
+        if(args.isEmpty()) {
             sender.sendMessage("${NinjaFreebuild.getPrefix()}§cYou didnt specify a home name, teleporting to your default home")
             return HomeManager.teleportHome(sender, "default")
         }

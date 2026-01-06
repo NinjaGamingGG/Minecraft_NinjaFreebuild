@@ -73,15 +73,14 @@ class WorldManager {
             
             val spawnWorld = prepareWorld(worldName, false) ?: return
 
-            spawnWorld.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false)
-            spawnWorld.setGameRule(GameRule.DO_WEATHER_CYCLE, false)
+            spawnWorld.setGameRule(GameRules.ADVANCE_TIME, false)
+            spawnWorld.setGameRule(GameRules.ADVANCE_WEATHER, false)
             spawnWorld.difficulty = Difficulty.PEACEFUL
-            spawnWorld.pvp = false
-
+            spawnWorld.setGameRule(GameRules.PVP, false)
             spawnWorld.time = 6000
             spawnWorld.clearWeatherDuration = 1
 
-            spawnWorld.setGameRule(GameRule.DO_MOB_SPAWNING, false)
+            spawnWorld.setGameRule(GameRules.SPAWN_MOBS, false)
         }
 
 

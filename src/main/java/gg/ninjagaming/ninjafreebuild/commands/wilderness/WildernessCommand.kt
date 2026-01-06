@@ -12,7 +12,7 @@ import kotlin.random.Random
 
 class WildernessCommand: CommandExecutor {
 
-    override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
+    override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         if (sender !is Player) {
             sender.sendMessage("${NinjaFreebuild.getPrefix()}§cOnly players can use this command!")
             return true
